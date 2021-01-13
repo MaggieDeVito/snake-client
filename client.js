@@ -10,8 +10,10 @@ const connect = function() {
   });
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
+
   conn.on('connect', () => {
     conn.write("Name: MMD")
+    // conn.write("Move: up")
   })
 
   conn.on('data', (data) => {
